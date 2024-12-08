@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rexy Cafe- Order</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* Global Styles */
+    body {
+      font-family: 'Poppins', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #ff7eb3, #ffd6e4);
+      color: white;
+      text-align: center;
+      padding: 50px 20px;
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+    }
+
+    .btn-primary {
+      background: #ff7eb3;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1.2em;
+      text-transform: uppercase;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background: #e06a98;
+    }
+
+    main {
+      margin: 20px 0;
+    }
+
+    .order-section {
+      text-align: center;
+    }
+
+    .order-section h2 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .order-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .form-group {
+      margin: 15px 0;
+      width: 300px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-size: 1.2em;
+    }
+
+    .form-group select,
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      font-size: 1em;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .btn-submit {
+      background: #ff7eb3;
+      color: white;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn-submit:hover {
+      background: #e06a98;
+    }
+
+    .btn-secondary {
+      margin-top: 20px;
+      background: white;
+      color: #ff7eb3;
+      padding: 10px 20px;
+      font-size: 1em;
+      border: 2px solid #ff7eb3;
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background: #ff7eb3;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="hero-content">
+        <h1>🍨 Welcome to Rexy Cafe 🍨</h1>
+        <p>Handcrafted ice cream with love and flavor.</p>
+        <a href="#order" class="btn-primary">Order Now</a>
+      </div>
+    </header>
+
+    <main id="order">
+      <section class="order-section">
+        <h2>Order</h2>
+        <div class="order-form">
+          <form id="ice-cream-form">
+            <div class="form-group">
+              <label for="flavor">🍦 Flavor</label>
+              <select id="flavor" required>
+                <option value="cherry">Cherry - RM7.50</option>
+                <option value="strawberry">Strawberry - RM5.55</option>
+                <option value="mulberry">Mulberry - RM4.25</option>
+                <option value="grapes">Grapes - RM6.55</option>
+                <option value="mango">Mango - RM8.25</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="quantity">🧮 Quantity</label>
+              <input type="number" id="quantity" min="1" required>
+            </div>
+            <div class="form-group">
+              <label for="day">📅 Day</label>
+              <select id="day" required>
+                <option value="normal">Normal Day</option>
+                <option value="friday">Friday Special (RM3.50)</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-submit">Add to Cart</button>
+          </form>
+        </div>
+      </section>
+      <a href="cart.html" class="btn-secondary">Go to Cart</a>
+    </main>
+  </div>
+  <script src="order.js"></script>
+</body>
+</html>
